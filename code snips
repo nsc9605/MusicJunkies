@@ -1,0 +1,14 @@
+const settings = {
+	"async": true,
+	"crossDomain": true,
+	"url": "https://billboard-api2.p.rapidapi.com/hot-100?date=2019-05-11&range=1-10",
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-key": "07be92493emshea6401a64571b97p134b1ejsn07c4838e18d4",
+		"x-rapidapi-host": "billboard-api2.p.rapidapi.com"
+	}
+};
+
+$.ajax(settings).done(function (response) {
+	console.log(response);
+});
