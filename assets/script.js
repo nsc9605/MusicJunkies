@@ -1,16 +1,3 @@
-//  YouTube API call 
-// let APIkey = "AIzaSyDkkhXaUKsrxmAvX4mbnc_jmfsX59lJm10";
-// let queryURL = "https://youtube.googleapis.com/youtube/v3/search?key=" + APIkey;
-
-// $.ajax({
-// url: queryURL,
-// method: "GET"
-// })
-// .then(function(responce){
-// console.log(queryURL);
-// console.log(responce);
-// })
-
 var userSongName = '';
 var userArtistName = '';
 
@@ -29,7 +16,7 @@ const settings = {
 	"url": "https://billboard-api2.p.rapidapi.com/hot-100?date=" + userDate + "&range=1-5",
 	"method": "GET",
 	"headers": {
-		"x-rapidapi-key": "3bc1742c89mshde29adf21290e72p18f578jsn5c3d1319dc37",  //07be92493emshea6401a64571b97p134b1ejsn07c4838e18d4
+		"x-rapidapi-key": "a7a119ea37msh093d314a936d441p161292jsn2b645c9b5683", 
 		"x-rapidapi-host": "billboard-api2.p.rapidapi.com"
 	}
 };
@@ -57,9 +44,22 @@ $( function() {
 	  });
   } );
                                             
-
+  
 
  
-
+  $.ajax({
+    type: "GET",
+    data: {
+        apikey:"7df083a8630c2141e251e825c85539f1",
+        q_artist: artistSearch,
+        format:"jsonp",
+        callback:"jsonp_callback"
+    },
+    url: "https://api.musixmatch.com/ws/1.1/track.search",
+    dataType: "jsonp",
+    jsonpCallback: 'jsonp_callback',
+    contentType: 'application/json',
+    success: function(data) {
+        console.log(data); 
   
 
