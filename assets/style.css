@@ -17,3 +17,22 @@ header {
     margin-top: 25px;
 }
 
+footer {
+    display: flex;
+    flex: 1 0 auto;
+    min-height: 100vh;
+}
+
+.card-tit1e {
+    color: black;
+}
+
+.card-image{
+    width: 55px;
+    height: 55px;
+}
+
+.card-content {
+    font-size: 35px;
+    color: rgb(49, 2, 49);
+}
