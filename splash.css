@@ -42,35 +42,69 @@ body {
 
 .splash-overlay {
     height: 100vh;
-    width: 100vh;
+    width: 900vh;
     position: absolute;
     top: 0;
     left: 0;
-    background: rgba(134, 21, 134, 0.658);
+    background: linear-gradient(5deg,#ff00aa77,#6213bd);
     z-index: 1;
-    opacity: 0.85;
+    opacity: 0.75;
 }
 
 .header-content {
-    z-index: 2;
+    z-index: 30;
+    margin-left:85px;
 }
 
 .header-content h1 {
-    font-size: 65px;
-    margin-bottom: 0;
+    font-family: cursive;
+    font-size: 100px;
+    font-weight: 900;
+    color: rgb(200, 230, 30);
+    margin-bottom: 200px;
+    transform: scale(1.5);
+
 }
 
+.btn {
+    border-radius: 10px;
+    background: #bd0360;
+    color: rgb(17, 2, 2);
+    font-family: cursive;
+    font-size: 2rem;
+    font-weight: 600;
+    text-decoration:none;
+    transform: scale(1.75)
+}
+
+.btn:hover {
+    background:#8705d3; 
+    color: rgba(245, 93, 22, 0.822);
+
+}
 .header-content p {
-    font-size: 1.5rem;
-    font-weight: 450;
+    font-size: 2.5rem;
+    font-weight: 550;
     color: black;
     display: block;
-    padding-bottom: 2rem;  
+    margin-top: 45px;
+    padding-bottom: 0.5rem;  
 }
 
 .header-content p span {
-    font-size: 2.5rem;
-    font-weight: 600;
+    font-size: 2.7rem;
+    font-weight: 650;
     color: red;
+
+}
+
+
+
+@media(max-width:960px){
+    .container{
+        padding-right:6rem;
+        padding-left: -100px;
+      
+    }
 
 }
