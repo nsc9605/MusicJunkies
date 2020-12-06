@@ -22,13 +22,12 @@ const settings = {
 
 $.ajax(settings).done(function (response) {
 	console.log(response);
-	// let imageEl = $("<img src = " + response.content[1].image + ">");
+	let imageEl = $("<img src = " + response.content[1].image + ">");
 	userSongName = response.content[1].title;
     userArtistName = response.content[1].artist;
     artistDate = response.info.date;
-
     $(".card-content").append(userArtistName, userSongName, artistDate);
-	// $(".card-image").append(imageEl);
+	 $(".card-image").append(imageEl);
 
 	renderVideoLink(userSongName, userArtistName);
 });
@@ -48,14 +47,11 @@ $.ajax(settings).done(function (response) {
 	
 	$.ajax(settingsTwo).done(function (responseTwo) {
 		console.log(responseTwo);
-
-		imageEl = $("<img src=" + responseTwo.track[0].strTrackThumb + ">");
-		videoEl = $("<a href=" + responseTwo.track[0].strMusicVid + ">");
-		$(".card-image").append(strTrackThumb);
+		var videoEl = $("<a>", { text: "link to video", href: responseTwo.track[0].strMusicVid });
 		$(".vidlink").append(videoEl);
-
 	});
 }
+
 
 // Datepicker
 $( function() {
