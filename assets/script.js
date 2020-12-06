@@ -57,12 +57,18 @@ $.ajax(settings).done(function (response) {
 	let imageEl = $("<img src = " + response.content[1].image + ">");
 	userSongName = response.content[1].title;
     userArtistName = response.content[1].artist;
+
 	dateToStandard = moment(response.info.date).format("ddd MMM Do, YYYY");
 	artistDate = $("<h2>").text("This Day in History: " + dateToStandard);
 	$(".card-content").empty();
 	$(".card-image").empty();
     $(".card-content").append(artistDate, userArtistName, userSongName);
 	$(".card-image").append(imageEl);
+
+    artistDate = response.info.date;
+    $(".card-content").append(userArtistName, userSongName, artistDate);
+	 $(".card-image").append(imageEl);
+
 
 	renderVideoLink(userSongName, userArtistName);
 });
@@ -83,13 +89,17 @@ $.ajax(settings).done(function (response) {
 	$.ajax(settingsTwo).done(function (responseTwo) {
 		console.log(responseTwo);
 
+
 		
 		videoEl = $("<a>", { href: responseTwo.track[0].strMusicVid, text: "Link to Music Video"} );
 		$(".vidlink").empty();
-		$(".vidlink").append(videoEl);
 
+		var videoEl = $("<a>", { text: "link to video", href: responseTwo.track[0].strMusicVid });
+
+		$(".vidlink").append(videoEl);
 	});
 }
+
 
 // Datepicker
 $( function() {
