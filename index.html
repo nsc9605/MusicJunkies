@@ -16,8 +16,17 @@
     <h1>Music Junkies</h1>
 </header>
 
+<div id="modal1" class="modal bottom-sheet">
+  <div class="modal-content">
+    <h4>Welcome To Music Junkies</h4>
+    <p>This Application is for all the music lovers out there. In the following page, you will be able to select a specific date and once you press the submit button you will be provided with information, and possibly a link to the music video. Please press agree to enter and start choosing dates!</p>
+  </div>
+  <div class="modal-footer">
+    <button data-target="modal1" class="btn modal-trigger">Modal</button>
+  </div>
+</div>
 <section class="date_container">
-    <p>Date: <input type="text" class="inputValue datepicker"></p>
+    <p>Date: <input type="text" class="inputValue datepicker" placeholder="Click here to select a date"></p>
 
     <button class="btn waves-effect waves-light submit" type="submit" name="action">
         <i class="material-icons-medium send">Submit</i>
@@ -45,15 +54,7 @@
   <div class="searchHistory"></div>
 </section>
 
-<div id="modal1" class="modal bottom-sheet">
-  <div class="modal-content">
-    <h4>Modal Header</h4>
-    <p>A bunch of text</p>
-  </div>
-  <div class="modal-footer">
-    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
-  </div>
-</div>
+
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -63,9 +64,11 @@
     <script src="assets/script.js"></script>
 </body>
 
+
 <footer>
-    <div class="footer-copyright">
-        <div class="container">© 2020 Music Junkies</div>
-    </div>
+  <div class="container">
+  © 2020 Music Junkies
+  </div>
 </footer>
+
 </html>
