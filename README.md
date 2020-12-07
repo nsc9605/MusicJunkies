@@ -26,7 +26,7 @@ At a minimum, your project README needs a title and a short description explaini
     THEN it will take the user to a new page where a YouTube video will deploy for the specified song. The user must click the "back" button in the browser to go back to the main page.
 
 
-(Click to deploy live link)[nsc9605.github.io/musicjunkies/]
+[Click to deploy live link](nsc9605.github.io/musicjunkies/)
 
 
 ## Usage/Demo Screenshot
@@ -39,13 +39,13 @@ Provide instructions and examples for use. Include screenshots as needed.
 ## Credits
 
 
-!(Jon Gudenzi)[https://github.com/JonGudenzi]
+[Jon Gudenzi](https://github.com/JonGudenzi)
 
-(Jessica Deck)[https://github.com/deck-jessica]
+[Jessica Deck](https://github.com/deck-jessica)
 
-(Wilkinson Williams)[https://github.com/Kingcoopa]
+[Wilkinson Williams](https://github.com/Kingcoopa)
 
-(Nicole Catapano)[https://github.com/nsc9605]
+[Nicole Catapano](https://github.com/nsc9605)
 
 
 If you followed tutorials, include links to those here as well.
