@@ -98,6 +98,9 @@ body {
 
 }
 
+.header-content p span .wht {
+    color: whitesmoke;
+}
 
 
 @media(max-width:960px){
