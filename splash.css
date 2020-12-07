@@ -74,7 +74,7 @@ body {
     font-size: 2rem;
     font-weight: 600;
     text-decoration:none;
-    transform: scale(1.75)
+    transform: scale(1.75);
 }
 
 .btn:hover {
@@ -82,19 +82,24 @@ body {
     color: rgba(245, 93, 22, 0.822);
 
 }
+
+hr {
+    margin-top: 40px;
+    transform: scale(1.2);
+}
 .header-content p {
     font-size: 2.5rem;
     font-weight: 550;
-    color: black;
+    color: rgb(233, 225, 225);
     display: block;
-    margin-top: 45px;
+    margin-top: 40px;
     padding-bottom: 0.5rem;  
 }
 
 .header-content p span {
-    font-size: 2.7rem;
-    font-weight: 650;
-    color: red;
+    font-size: 2.8rem;
+    font-weight: 715;
+    color:black;
 
 }
 
