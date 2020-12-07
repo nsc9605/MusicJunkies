@@ -26,11 +26,22 @@ header {
     margin-top: 25px;
 }
 
+
 footer {
     display: flex;
     flex: 1 0 auto;
-    min-height: 100vh;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Abel', sans-serif;
+    font-size: 30px;
+    position: bottom;
+    align-content: end;
+    min-width: 100vh;
+    margin-top: 100px;
+    background: black;
+    color: rgb(177, 37, 177);
 }
+
 
 .card-tit1e {
     color: black;
@@ -42,6 +53,7 @@ footer {
 }
 
 .card-content {
-    font-size: 35px;
+    font-size: 40px;
     color: rgb(49, 2, 49);
+
 }
