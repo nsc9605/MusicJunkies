@@ -1,4 +1,12 @@
 
+body {
+    background-image: url(/MusicJunkies/HomeScreen.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
 header {
     display: flex;
     width: 100%;
@@ -7,11 +15,12 @@ header {
     color: rgb(177, 37, 177);
     background: black;
     padding: 0px;
-    margin-left: -8px;
-    margin-right: 0px;
+    margin-left: 0px;
+    margin-right: -25px;
     text-align: center;
-    border: 8px solid rgb(177, 37, 177);
+    border: 10px solid rgb(177, 37, 177);
 }
+
 
 .date_container {
     margin-top: 25px;
