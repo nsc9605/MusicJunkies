@@ -100,12 +100,9 @@ $.ajax(settings).done(function (response) {
 	});
 }
 
-
 // Datepicker
-$( function() {
-    $( ".datepicker" ).datepicker({
-
-		dateFormat: "yy-mm-dd"
-	  });
-  } );
-
+$(document).ready(function(){
+    $('.datepicker').datepicker({
+		format: "yyyy-mm-dd"
+	});
+  });
