@@ -69,12 +69,12 @@ function inputDate(userDate) {
 	// Added elements to space out card content
     dateToStandard = moment(response.info.date).format("ddd MMM Do, YYYY");
 	artistDate = $("<h2>").text("This Day in History: " + dateToStandard);
-	userSongName = $("<p>").text("Song: " + userSongName);
-	userArtistName = $("<p>").text("Artist: " + userArtistName);
+	displaySongName = $("<p>").text("Song: " + userSongName);
+	displayArtistName = $("<p>").text("Artist: " + userArtistName);
 
     $(".card-content").empty();
     $(".card-image").empty();
-    $(".card-content").append(artistDate, userSongName, userArtistName);
+    $(".card-content").append(artistDate, displaySongName, displayArtistName);
     $(".card-image").append(imageEl);
 
     renderVideoLink(userSongName, userArtistName);
@@ -102,17 +102,12 @@ function renderVideoLink() {
   $.ajax(settingsTwo).done(function (responseTwo) {
     console.log(responseTwo);
 
-    videoEl = $("<a>", {
+    var videoEl = $("<a>", {
       href: responseTwo.track[0].strMusicVid,
       text: "Link to Music Video",
     });
-    $(".vidlink").empty();
-
-    var videoEl = $("<a>", {
-      text: "link to video",
-      href: responseTwo.track[0].strMusicVid,
-    });
-
+    
+	  $(".vidlink").empty();
     $(".vidlink").append(videoEl);
   });
 }
@@ -122,4 +117,5 @@ $(document).ready(function () {
   $(".datepicker").datepicker({
     format: "yyyy-mm-dd",
   });
+  
 });
