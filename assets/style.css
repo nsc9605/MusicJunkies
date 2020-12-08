@@ -1,4 +1,6 @@
-
+* {
+    box-sizing: border-box;
+}
 body {
     background-image: url(/MusicJunkies/HomeScreen.jpg);
     background-repeat: no-repeat;
@@ -27,6 +29,8 @@ header {
 
 .date_container {
     margin-top: 25px;
+    color: white;
+    font-size: 25px;
 }
 
 footer {
