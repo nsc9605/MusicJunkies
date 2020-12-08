@@ -5,6 +5,7 @@ body {
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
+    padding: 10px;
 }
 
 header {
@@ -55,5 +56,13 @@ footer {
 .card-content {
     font-size: 40px;
     color: rgb(49, 2, 49);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 
+}
+
+.modal-content {
+    opacity: 1;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial;
+    font-size: 25px 18px; 
+  
 }
