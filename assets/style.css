@@ -1,75 +1,137 @@
 * {
     box-sizing: border-box;
-}
-body {
-    background-image: url(/MusicJunkies/HomeScreen.jpg);
+  }
+  
+  body {
+    font-family: 'Abel', sans-serif;
+    background-image: url(../assets/images/beach.png);
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
     padding: 10px;
-}
-
-header {
+  }
+  
+  header {
     display: flex;
+    flex: 1 0 auto;
     position: relative;
     width: 100%;
     justify-content: center;
-    font-family: cursive;
+    font-family: 'Abel', sans-serif;
     font-size: 100px;
-    font-weight: 1000;
-    color: rgb(200, 230, 30);
-    transform: scale(1.5);
-    background:none;
-    padding: 0px;
+    font-weight: bold;
+    color: rgb(39, 37, 37);
+    /* transform: scale(1.5); */
+    margin-top: 10px;
     margin-left: 0px;
     margin-right: -25px;
     text-align: center;
-}
-
-
-.date_container {
+    /* background: rgba(255, 202, 102, 0.596); */
+  }
+  
+  
+  .wrapper {
+    background-color: rgba(255, 202, 102, 0.596);
+    border: 5px solid #e4764ad3;
+    border-radius: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+     
+  }
+  
+  .date_container {
     margin-top: 25px;
-    color: white;
+    color: black;
     font-size: 25px;
-}
-
-
-footer {
+    font-style: underline;
+    justify-content: center;
+    padding: 10px;
+  }
+  
+  
+  footer {
     display: flex;
     flex: 1 0 auto;
-    padding: 20px;
+    padding: 40px;
     text-align: center;
-    font-family: 'Abel', sans-serif;
+    font-family: "Abel", sans-serif;
     font-size: 30px;
-    position: bottom;
+    position: relative;
     align-content: end;
-    min-width: 100vh;
+    width: 100%;
     margin-top: 100px;
-    background: black;
-    color: rgb(177, 37, 177);
-}
-
-
-.card-tit1e {
+    background: rgba(19, 153, 135, 0.87);
+    color: white;
+  }
+  
+  .input-field {
+    width: 50%;
     color: black;
-}
-
-.card-image{
-    width: 55px;
-    height: 55px;
-}
-
-.card-content {
-    font-size: 40px;
+  }
+  
+  .card-tit1e {
+    color: black;
+  }
+  
+  .card-image {
+    display: flex;
+    flex: auto;
+    width: 90px;
+    height: 90px;
+    justify-content: end;
+    margin-left: 80%;
+    margin-right: 30px;
+    margin-top: -120px;
+    margin-bottom: 30px;
+    align-items: end;
+  }
+  
+  .card-content p {
+    font-size: 35px;
     color: rgb(49, 2, 49);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
-
-}
-
-.modal-content {
+    font-family: 'Abel', sans-serif;
+    align-content: left;
+    justify-content: start;
+    text-align: left;
+  }
+  
+  /* Card whole container properties */
+  .row-container {
+    align-items: center;
+    display: flex;
+    position: center;
+    opacity: .78;
+    position: center;
+    justify-content: center;
+    width: 75%;
+    margin-left: 10%;
+  }
+  
+  .modal-content {
     opacity: 1;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial;
+    font-family: 'Abel', sans-serif;;
     font-size: 25px 18px; 
   
-}
+  }
+  
+  h2 {
+    text-align: center;
+  }
+  
+  p {
+    font-family: 'Abel', sans-serif;
+    font-size: 23px;
+    
+  }
+  
+  /* MEDIA QUERY for responsive */
+  @media only screen and (max-width: 600px) {
+    .input-field .prefix ~ input {
+    width: 80%;
+    width: calc(100% - 3rem); } 
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .input-field .prefix ~ input {
+    width: 100%; } }

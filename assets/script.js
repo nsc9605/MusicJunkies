@@ -4,8 +4,8 @@ var userArtistName = "";
 
 // // Modal button/function
 $(document).ready(function(){
-  $('#modal1').modal();
-  $('#modal1').modal('open');
+  $('#modalIntro').modal();
+  $('#modalIntro').modal('open');
 });
           
 // function to save user input to local storage for persistent data
@@ -101,14 +101,30 @@ function renderVideoLink() {
 
   $.ajax(settingsTwo).done(function (responseTwo) {
     console.log(responseTwo);
-
-    var videoEl = $("<a>", {
-      href: responseTwo.track[0].strMusicVid,
-      text: "Link to Music Video",
-    });
+// // If/Else for if video link not available prompts modal
+    if (responseTwo && responseTwo.track) {
+      var videoEl = $("<a>", {
+        href: responseTwo.track[0].strMusicVid,
+        text: "Link to Music Video",
+      });
+      
+      $(".vidlink").empty();
+      $(".vidlink").append(videoEl);
+     
+    }
+    else {
+      $('#modalVid').modal(); 
+      $('#modalVid').modal('open');
+      console.log("Video Not Found!");
+    };
+   
+    // var videoEl = $("<a>", {
+    //   href: responseTwo.track[0].strMusicVid,
+    //   text: "Link to Music Video",
+    // });
     
-	  $(".vidlink").empty();
-    $(".vidlink").append(videoEl);
+	  // $(".vidlink").empty();
+    // $(".vidlink").append(videoEl);
   });
 }
 
