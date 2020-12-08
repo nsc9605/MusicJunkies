@@ -2,11 +2,11 @@
 var userSongName = "";
 var userArtistName = "";
 
-// Modal button/function
-// $(document).ready(function(){
-//     // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
-//     $('.modal1').modal('open');
-//   });
+// // Modal button/function
+$(document).ready(function(){
+  $('#modal1').modal();
+  $('#modal1').modal('open');
+});
           
 // function to save user input to local storage for persistent data
 function saveToStorage(newDate) {
