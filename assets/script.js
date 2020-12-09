@@ -83,7 +83,18 @@ function inputDate(userDate) {
   
   var songTwo = $("<p>").text("#2: " + response.content[2].title + " by " + response.content[2].artist);
 
-  $()
+
+    renderVideoLink(userSongName, userArtistName);
+    var headline = $("<h4>").text("Other Top Songs: ")
+    var songTwo = $("<p>").text("#2: " + response.content[2].title + " by " + response.content[2].artist);
+    var songThree = $("<p>").text("#3: " + response.content[3].title + " by " + response.content[3].artist);
+    var songFour = $("<p>").text("#4: " + response.content[4].title + " by " + response.content[4].artist);
+    var songFive = $("<p>").text("#5: " + response.content[5].title + " by " + response.content[5].artist);
+
+  
+  $(".card-content").append(headline, songTwo, songThree, songFour, songFive);
+
+
   });
 }
 
@@ -107,6 +118,14 @@ function renderVideoLink() {
 
   $.ajax(settingsTwo).done(function (responseTwo) {
     console.log(responseTwo);
+
+
+    var videoEl = $("<a>", {
+      href: responseTwo.track[0].strMusicVid,
+      text: "Link to Music Video",
+      target: "_blank"
+    });
+
 // // If/Else for if video link not available prompts modal
     if (responseTwo && responseTwo.track) {
       var videoEl = $("<a>", {
@@ -129,6 +148,7 @@ function renderVideoLink() {
     //   href: responseTwo.track[0].strMusicVid,
     //   text: "Link to Music Video",
     // });
+
     
 	  // $(".vidlink").empty();
 	// $(".vidlink").append(videoEl);
