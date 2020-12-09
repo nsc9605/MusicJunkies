@@ -124,6 +124,10 @@
     font-size: 23px;
     
   }
+
+  .search-history-btn {
+      margin-right: 5px;
+  }
   
   /* MEDIA QUERY for responsive */
   @media only screen and (max-width: 600px) {
