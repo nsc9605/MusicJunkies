@@ -81,11 +81,11 @@ function inputDate(userDate) {
 	// making second call
   renderVideoLink(userSongName, userArtistName);
   
-  var songTwo = $("<p>").text("#2: " + response.content[2].title + " by " + response.content[2].artist);
+  // var songTwo = $("<p>").text("#2: " + response.content[2].title + " by " + response.content[2].artist);
 
 
     renderVideoLink(userSongName, userArtistName);
-    var headline = $("<h4>").text("Other Top Songs: ")
+    var headline = $("<h3>").text("Other Top Songs: ")
     var songTwo = $("<p>").text("#2: " + response.content[2].title + " by " + response.content[2].artist);
     var songThree = $("<p>").text("#3: " + response.content[3].title + " by " + response.content[3].artist);
     var songFour = $("<p>").text("#4: " + response.content[4].title + " by " + response.content[4].artist);

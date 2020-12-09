@@ -86,6 +86,10 @@
     margin-bottom: 30px;
     align-items: end;
   }
+
+  .card-top5 p {
+    font-size: 14px;
+  }
   
   .card-content p {
     font-size: 35px;
@@ -121,12 +125,21 @@
   
   p {
     font-family: 'Abel', sans-serif;
-    font-size: 23px;
+    font-size: 20px;
     
+  }
+
+  label {
+    font-size: 25px;
+    border: 1px solid #e4764ad3;
+    background-color: rgba(255, 202, 102, 0.596);
+    color: black;
+    font-style: underline;
   }
 
   .search-history-btn {
       margin-right: 5px;
+      margin-top: 5px;
   }
   
   /* MEDIA QUERY for responsive */
