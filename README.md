@@ -2,42 +2,46 @@
 
 ## Description 
 
-This application targets all the music lovers out there. Provided with a calendar starting with the current date, users will be able to select a specific month, day, and year to find out what song was released on that date in history and which one was at the top of the Billboard 100 Charts. Once the submit button is clicked, the album cover of that specific song/artist will be provided as well as name of the artist/band, song, and release date. If available, a link will be provided under the information that will bring the user to a a page providing the YouTube music video for that specific song.
+This application targets all the music lovers out there, a place where fans can explore what songs were at the top of the Billboard Charts at any given date in history. Provided with a calendar starting with the current date, users will be able to navigate into a specific month, day, and year to find out what song was #1 on that date in history on the Billboard Top 100 Charts as well as the other top 5 songs of that date. If available, the user will also be provided with:
 
-The ap
+ • Album cover
+ • Link to music video
+ • Link to page with biography and more information on that artist 
 
+The dates that the user chooses will be saved at the bottom of the page for future reference. 
 
-At a minimum, your project README needs a title and a short description explaining the what, why, and how. What was your motivation? Why did you build this project? (Note: The answer is not "Because it was a homework assignment.") What problem does it solve? What did you learn? What makes your project stand out? If your project has a lot of features, consider adding a heading called "Features" and listing them here.
+## User Story
 
-
+    AS a music enthusiast
+    I WANT to search for the top billboard hits of a particular date in time
+    SO THAT I can view information about the top artists of that day. This information includes a photo, a bio, and in some cases a video.
 
 
 ## Installation
 
-    WHEN the user clicks on the input box
-    THEN a calendar will pop up with the current day, month, and year.
-    If the user wants to choose a different date
-    THEN they can click on the month to choose out of the provided months, and click arrow back to go to a different year.
-    WHEN the date is selected,
-    THEN the user must click the "Submit" button and the album image will appear in the card box, along with the date specified, artist name, and song title.
-    IF there is a video for the song chosen
-    THEN a link will be provided 
-    WHEN the user clicks on the provided link
-    THEN it will take the user to a new page where a YouTube video will deploy for the specified song. The user must click the "back" button in the browser to go back to the main page.
-
-
+Deployed link:
 [Click to deploy live link](nsc9605.github.io/musicjunkies/)
 
 
 ## Usage/Demo Screenshot
 
-Provide instructions and examples for use. Include screenshots as needed. 
+When the page is deployed, the user will be provided with an information box about the page and instructed to press "Agree" button to proceed to the page.
+
+Steps to follow once in the page:
+
+1. An input box is provided under "Date: " that once clicked, a calendar will pop up with the current day, month, and year.
+2. Click on the month to select different option.
+3. Click the year to go back in increments of 20.
+4. When the date is selected, the user must click the "Submit" button and a card will pop up with the date selected followed by artist name, song title, album cover (if available), link to biography page, and other top 5 songs of that date.
+5. If there is a video for that song available, a link will be provided. 
+    If no video is available, a modal popup will appear with a "no video available" message and will be instructed to select another date. 
+6. WHEN the user clicks on the provided link(s),  it will take the user to a new page where a YouTube video will deploy for the specified song or the biography page will deploy in another window.
+7. Previous selected dates will be saved at the bottom of the page for user to refer back to.
 
 ![Title of Document](Link-to-document.png)
 
 
 ## Credits
-
 
 [Jon Gudenzi](https://github.com/JonGudenzi)
 
@@ -57,9 +61,10 @@ If you followed tutorials, include links to those here as well.
 
 Built with
 
-•VS Code
-
-
+• Visual Studio Code
+• Jquery
+• JavaScript
+• Materialize
 
 ## License
 
