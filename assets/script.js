@@ -87,10 +87,6 @@ function inputDate(userDate) {
 
 
 
-	// making second call
-  renderVideoLink(userSongName, userArtistName);
-
-
 
     var headline = $("<h3>").text("Other Top Songs: ")
     var songTwo = $("<p>").text("#2: " + response.content[2].title + " by " + response.content[2].artist);
@@ -130,16 +126,6 @@ function renderVideoLink() {
 // // If/Else for if video link not available prompts modal
 
 
-
-    var videoEl = $("<a>", {
-      href: responseTwo.track[0].strMusicVid,
-      text: "Link to Music Video",
-      target: "_blank"
-    });
-
-
-// If/Else for if video link not available prompts modal
-
     if (responseTwo && responseTwo.track) {
       var videoEl = $("<a>", {
         href: responseTwo.track[0].strMusicVid,
@@ -157,30 +143,13 @@ function renderVideoLink() {
       console.log("Video Not Found!");
     };
    
-
-    // var videoEl = $("<a>", {
-    //   href: responseTwo.track[0].strMusicVid,
-    //   text: "Link to Music Video",
-    // });
-    
-	  // $(".vidlink").empty();
-    // $(".vidlink").append(videoEl);
-  });
-}
-
-
-    var videoEl = $("<a>", {
-      href: responseTwo.track[0].strMusicVid,
-      text: "Link to Music Video",
-    });
-
-    
-	$(".vidlink").empty();
-	$(".vidlink").append(videoEl);
-	// make your third call
 	artistSearchWiki(userArtistName);
+
   });
 }
+
+
+
 
 async function artistSearchWiki(data) {
     //event.preventDefault();
