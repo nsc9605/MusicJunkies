@@ -4,9 +4,9 @@
 
 This application targets all the music lovers out there, a place where fans can explore what songs were at the top of the Billboard Charts at any given date in history. Provided with a calendar starting with the current date, users will be able to navigate into a specific month, day, and year to find out what song was #1 on that date in history on the Billboard Top 100 Charts as well as the other top 5 songs of that date. If available, the user will also be provided with:
 
- • Album cover
- • Link to music video
- • Link to page with biography and more information on that artist 
+ * Album cover
+ * Link to music video
+ * Link to page with biography and more information on that artist 
 
 The dates that the user chooses will be saved at the bottom of the page for future reference. 
 
