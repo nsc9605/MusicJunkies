@@ -47,7 +47,7 @@ $(".submit").on("click", function () {
 
 // function to search for user's chosen date and run it through the Billboard API to find #1 song that day
 function inputDate(userDate) {
-	
+	// rowContainer.classList.add("hide");
   const settings = {
     async: true,
     crossDomain: true,
@@ -70,21 +70,21 @@ function inputDate(userDate) {
 
 	// Added elements to space out card content
     dateToStandard = moment(response.info.date).format("ddd MMM Do, YYYY");
-	artistDate = $("<h2>").text("This Day in History: " + dateToStandard);
-	displaySongName = $("<p>").text("Song: " + userSongName);
-	displayArtistName = $("<p>").text("Artist: " + userArtistName);
+	  artistDate = $("<h2>").text("This Day in History: " + dateToStandard);
+	  displaySongName = $("<p>").text("Song: " + userSongName);
+	  displayArtistName = $("<p>").text("Artist: " + userArtistName);
 
     $(".card-content").empty();
     $(".card-image").empty();
     $(".card-content").append(artistDate, displaySongName, displayArtistName);
     $(".card-image").append(imageEl);
+
+
 	// making second call
   renderVideoLink(userSongName, userArtistName);
-  
-  // var songTwo = $("<p>").text("#2: " + response.content[2].title + " by " + response.content[2].artist);
 
 
-    renderVideoLink(userSongName, userArtistName);
+    // renderVideoLink(userSongName, userArtistName);
     var headline = $("<h3>").text("Other Top Songs: ")
     var songTwo = $("<p>").text("#2: " + response.content[2].title + " by " + response.content[2].artist);
     var songThree = $("<p>").text("#3: " + response.content[3].title + " by " + response.content[3].artist);
@@ -126,12 +126,13 @@ function renderVideoLink() {
       target: "_blank"
     });
 
-// // If/Else for if video link not available prompts modal
+
+// If/Else for if video link not available prompts modal
     if (responseTwo && responseTwo.track) {
       var videoEl = $("<a>", {
-		    target: "_blank",
         href: responseTwo.track[0].strMusicVid,
         text: "Link to Music Video",
+        target: "_blank",
       });
       
       $(".vidlink").empty();
@@ -144,14 +145,14 @@ function renderVideoLink() {
       console.log("Video Not Found!");
     };
    
-    // var videoEl = $("<a>", {
-    //   href: responseTwo.track[0].strMusicVid,
-    //   text: "Link to Music Video",
-    // });
+    var videoEl = $("<a>", {
+      href: responseTwo.track[0].strMusicVid,
+      text: "Link to Music Video",
+    });
 
     
-	  // $(".vidlink").empty();
-	// $(".vidlink").append(videoEl);
+	$(".vidlink").empty();
+	$(".vidlink").append(videoEl);
 	// make your third call
 	artistSearchWiki(userArtistName);
   });
@@ -188,9 +189,6 @@ async function artistSearchWiki(data) {
     return json;
   }
   
-
-  
-
 
 // Datepicker
 $(document).ready(function () {
