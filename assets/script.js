@@ -71,7 +71,7 @@ function inputDate(userDate) {
 	// Added elements to space out card content
     dateToStandard = moment(response.info.date).format("ddd MMM Do, YYYY");
 	  artistDate = $("<h2>").text("This Day in History: " + dateToStandard);
-	  displaySongName = $("<p>").text("Song: " + userSongName);
+	  displaySongName = $("<p>").text("Song #1: " + userSongName);
 	  displayArtistName = $("<p>").text("Artist: " + userArtistName);
 
     $(".card-content").empty();
@@ -84,15 +84,15 @@ function inputDate(userDate) {
   renderVideoLink(userSongName, userArtistName);
 
 
-    // renderVideoLink(userSongName, userArtistName);
+
     var headline = $("<h3>").text("Other Top Songs: ")
     var songTwo = $("<p>").text("#2: " + response.content[2].title + " by " + response.content[2].artist);
     var songThree = $("<p>").text("#3: " + response.content[3].title + " by " + response.content[3].artist);
     var songFour = $("<p>").text("#4: " + response.content[4].title + " by " + response.content[4].artist);
     var songFive = $("<p>").text("#5: " + response.content[5].title + " by " + response.content[5].artist);
 
-  
-  $(".card-content").append(headline, songTwo, songThree, songFour, songFive);
+  $(".top5").empty();
+  $(".top5").append(headline, songTwo, songThree, songFour, songFive);
 
 
   });
