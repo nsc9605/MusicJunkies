@@ -39,7 +39,6 @@ $(".search-history-btn").on("click", function () {
 // this is where the first and second API calls are made, once a user has input a date to search for
 $(".submit").on("click", function () {
   let inputUserDate = $(".inputValue").val();
-
   inputDate(inputUserDate);
   saveToStorage(inputUserDate);
   $(".inputValue").val("");
@@ -47,7 +46,11 @@ $(".submit").on("click", function () {
 
 // function to search for user's chosen date and run it through the Billboard API to find #1 song that day
 function inputDate(userDate) {
+
+  billBox.style.display = "block";
+
 	// rowContainer.classList.add("hide");
+
   const settings = {
     async: true,
     crossDomain: true,
@@ -80,6 +83,10 @@ function inputDate(userDate) {
     $(".card-image").append(imageEl);
 
 
+    renderVideoLink(userSongName, userArtistName);
+
+
+
 	// making second call
   renderVideoLink(userSongName, userArtistName);
 
@@ -93,6 +100,7 @@ function inputDate(userDate) {
 
   
   $(".card-content").append(headline, songTwo, songThree, songFour, songFive);
+
 
 
   });
@@ -119,6 +127,9 @@ function renderVideoLink() {
   $.ajax(settingsTwo).done(function (responseTwo) {
     console.log(responseTwo);
 
+// // If/Else for if video link not available prompts modal
+
+
 
     var videoEl = $("<a>", {
       href: responseTwo.track[0].strMusicVid,
@@ -128,6 +139,7 @@ function renderVideoLink() {
 
 
 // If/Else for if video link not available prompts modal
+
     if (responseTwo && responseTwo.track) {
       var videoEl = $("<a>", {
         href: responseTwo.track[0].strMusicVid,
@@ -145,6 +157,18 @@ function renderVideoLink() {
       console.log("Video Not Found!");
     };
    
+
+    // var videoEl = $("<a>", {
+    //   href: responseTwo.track[0].strMusicVid,
+    //   text: "Link to Music Video",
+    // });
+    
+	  // $(".vidlink").empty();
+    // $(".vidlink").append(videoEl);
+  });
+}
+
+
     var videoEl = $("<a>", {
       href: responseTwo.track[0].strMusicVid,
       text: "Link to Music Video",

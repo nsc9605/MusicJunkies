@@ -154,11 +154,22 @@
     margin-right: 16px;
     align-self: stretch;
   }
+
+  #hideFool{
+      display: none;
+  }
   
+
+  #billBox{
+      display: none;
+  }
+
+
   button {
     opacity: .85;
     font-family: 'Abel', sans-serif;
   }
+
 
 
   /* MEDIA QUERY for responsive */
