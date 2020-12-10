@@ -1,71 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"/>
-    <link rel="stylesheet" href="assets/style.css">
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abel&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://ih1.redbubble.net/image.292625905.5584/flat,128x,075,f-pad,128x128,f8f8f8.u3.jpg"
+    />
+    <link rel="stylesheet" href="assets/style.css" />
     <title>Music Junkies</title>
-</head>
+  </head>
 
-<body>
-<header>
-    <h1>Music Junkies</h1>
-</header>
-
-<section class="date_container">
-    <p>Date: <input type="text" class="inputValue datepicker"></p>
-
-    <button class="btn waves-effect waves-light submit" type="submit" name="action">
-        <i class="material-icons-medium send">Submit</i>
-    </button>
-</section>
-
-
-<div class="row">
-    <div class="col s12 m7">
-      <div class="card billBoardEl">
-        <div class="card-image">
-          <img src ="">
-          <span class="card-title"></span>
+  <body>
+    <div class="wrapper">
+      <header>
+        <div id="logo"></div>
+        <img id="logo" src="assets/images/pine-pic.jpg" alt="logo">
+        <h1>Music Junkies</h1>
+      </header>
+    </div>
+    <div class="modal-container">
+      <!-- Modal Structure -->
+      <div id="modalIntro" class="modal">
+        <div class="modal-content">
+          <h4>Welcome To Music Junkies</h4>
+          <p>
+            This Application is for all the music lovers out there! In the
+            following page, you will select a specific month, day and year in
+            history from the provided calendar. Press the submit button which
+            will display the #1 song, artist and album cover on the Billboard
+            Top 100 Charts of that specific date.
+            <br />
+            <br />
+            Followed by links to that music video (if available) as well as a
+            link for more information about that artist. Finally, the other top
+            5 songs will be listed for that date.
+            <br />
+            <br />
+            Please press agree to enter and start choosing dates!
+          </p>
         </div>
-        <div class="card-content">
-        </div>
-        <div class="card-action vidlink">
-          
+        <div class="modal-footer">
+          <a
+            href="#modalIntro"
+            class="modal-action modal-close waves-effect waves-green btn"
+            >Agree</a
+          >
         </div>
       </div>
     </div>
-</div>
 
-<section class="search-history-container">
-  <div class="searchHistory"></div>
-</section>
+    <section class="date_container">
+      <p>
+        <label> Select Date: </label>
+        <input
+          type="text"
+          class="inputValue datepicker input-field"
+          placeholder="Click here to select a date"
+        />
+        <!-- <label for="datepicker">Click here to select a date</label> -->
+      </p>
 
-<div id="modal1" class="modal bottom-sheet">
-  <div class="modal-content">
-    <h4>Modal Header</h4>
-    <p>A bunch of text</p>
-  </div>
-  <div class="modal-footer">
-    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
-  </div>
-</div>
+      <button
+        class="btn waves-effect waves-light submit"
+        type="submit"
+        name="action"
+      >
+        <i class="small material-icons right">send</i>
+        Submit
+      </button>
+    </section>
 
+    <div class="row-container">
+      <div class="col s12 m7">
+        <div class="card billBoardEl" id="billBox">
+          <div class="card-content col-sm-5"></div>
+          <div class="card-image">
+            <img src="" class="card-image-top" />
+            <span class="card-title"></span>
+          </div>
+          <div class="card-action vidlink"></div>
+          <div class="card-action artistlink"></div>
+          <div class="card top5"></div>
+        </div>
+      </div>
+    </div>
+
+    <section class="search-history-container">
+      <label> Dates previously selected </label>
+      <div class="searchHistory"></div>
+    </section>
+
+    <!-- If no video link available--modal message -->
+    <div class="modal-container">
+      <div id="modalVid" class="modal">
+        <div class="modal-content">
+          <h4>Sorry! Try again!</h4>
+          <p>
+            Unfortunately there is no video currently available for this track!
+            Please select a different date and try again!
+          </p>
+        </div>
+        <div class="modal-footer">
+          <a
+            href="#modalVid"
+            class="modal-action modal-close waves-effect waves-green btn"
+            >Try Again</a
+          >
+        </div>
+      </div>
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="assets/script.js"></script>
-</body>
+  </body>
 
-<footer>
-    <div class="footer-copyright">
-        <div class="container">© 2020 Music Junkies</div>
-    </div>
-</footer>
+  <footer>
+    <div class="container">© 2020 Music Junkies</div>
+  </footer>
 </html>
