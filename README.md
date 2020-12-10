@@ -19,7 +19,6 @@ The dates that the user chooses will be saved at the bottom of the page for futu
 
 ## Installation
 
-Deployed link:
 ![Click to deploy live link](https://nsc9605.github.io/MusicJunkies/)
 
 
