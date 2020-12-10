@@ -74,8 +74,8 @@ function inputDate(userDate) {
 	// Added elements to space out card content
     dateToStandard = moment(response.info.date).format("ddd MMM Do, YYYY");
 	  artistDate = $("<h2>").text("This Day in History: " + dateToStandard);
-	  displaySongName = $("<p>").text("Song #1: " + userSongName);
-	  displayArtistName = $("<p>").text("Artist: " + userArtistName);
+	  displaySongName = $("<h3>").text("Song #1: " + userSongName);
+	  displayArtistName = $("<h3>").text("Artist: " + userArtistName);
 
     $(".card-content").empty();
     $(".card-image").empty();
