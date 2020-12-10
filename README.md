@@ -19,7 +19,7 @@ The dates that the user chooses will be saved at the bottom of the page for futu
 
 ## Installation
 
-![Click to deploy live link](https://nsc9605.github.io/MusicJunkies/)
+[Click to deploy live link](https://nsc9605.github.io/MusicJunkies/)
 
 
 ## Usage/Demo Screenshot
@@ -42,10 +42,6 @@ Steps to follow once in the page:
 ### Demonstration
 
 ![Music Junkies Demo](assets/images/MusicJunkies.gif)
-
-# Demonstration
-
-[Music Junkies Demo](assets/images/MusicJunkies.gif)
 
 
 
