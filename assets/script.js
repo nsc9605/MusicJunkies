@@ -39,7 +39,6 @@ $(".search-history-btn").on("click", function () {
 // this is where the first and second API calls are made, once a user has input a date to search for
 $(".submit").on("click", function () {
   let inputUserDate = $(".inputValue").val();
-
   inputDate(inputUserDate);
   saveToStorage(inputUserDate);
   $(".inputValue").val("");
@@ -47,7 +46,7 @@ $(".submit").on("click", function () {
 
 // function to search for user's chosen date and run it through the Billboard API to find #1 song that day
 function inputDate(userDate) {
-	
+  billBox.style.display = "block";
   const settings = {
     async: true,
     crossDomain: true,
@@ -78,23 +77,8 @@ function inputDate(userDate) {
     $(".card-image").empty();
     $(".card-content").append(artistDate, displaySongName, displayArtistName);
     $(".card-image").append(imageEl);
-	// making second call
-  renderVideoLink(userSongName, userArtistName);
-  
-  var songTwo = $("<p>").text("#2: " + response.content[2].title + " by " + response.content[2].artist);
-
 
     renderVideoLink(userSongName, userArtistName);
-    var headline = $("<h4>").text("Other Top Songs: ")
-    var songTwo = $("<p>").text("#2: " + response.content[2].title + " by " + response.content[2].artist);
-    var songThree = $("<p>").text("#3: " + response.content[3].title + " by " + response.content[3].artist);
-    var songFour = $("<p>").text("#4: " + response.content[4].title + " by " + response.content[4].artist);
-    var songFive = $("<p>").text("#5: " + response.content[5].title + " by " + response.content[5].artist);
-
-  
-  $(".card-content").append(headline, songTwo, songThree, songFour, songFive);
-
-
   });
 }
 
@@ -118,18 +102,9 @@ function renderVideoLink() {
 
   $.ajax(settingsTwo).done(function (responseTwo) {
     console.log(responseTwo);
-
-
-    var videoEl = $("<a>", {
-      href: responseTwo.track[0].strMusicVid,
-      text: "Link to Music Video",
-      target: "_blank"
-    });
-
 // // If/Else for if video link not available prompts modal
     if (responseTwo && responseTwo.track) {
       var videoEl = $("<a>", {
-		    target: "_blank",
         href: responseTwo.track[0].strMusicVid,
         text: "Link to Music Video",
       });
@@ -148,49 +123,11 @@ function renderVideoLink() {
     //   href: responseTwo.track[0].strMusicVid,
     //   text: "Link to Music Video",
     // });
-
     
 	  // $(".vidlink").empty();
-	// $(".vidlink").append(videoEl);
-	// make your third call
-	artistSearchWiki(userArtistName);
+    // $(".vidlink").append(videoEl);
   });
 }
-
-async function artistSearchWiki(data) {
-    //event.preventDefault();
-    // const inputValue = document.querySelector('.js-search-input').value;
-    var searchQuery = userArtistName;
-  
-    try {
-      const results = await searchWikipedia(data);
-	  console.log(results);
-    var artistWikiPageId = results.query.search[0].pageid;
-    var artistLink = $("<a>", 
-        {target: "_blank", 
-        href: "https://en.wikipedia.org/?curid="+ artistWikiPageId, 
-        text: "Link to " + userArtistName + " Wikipedia Page"});
-        $(".artistlink").empty();
-      $(".artistlink").append(artistLink);
-    } catch (err) {
-      console.log(err);
-      alert('Failed to search wikipedia');
-    }
-  }
-  
-  async function searchWikipedia(searchQuery) {
-    const endpoint = `https://en.wikipedia.org/w/api.php?action=query&list=search&prop=info&&inprop=url&utf8=&format=json&origin=*&srlimit=20&srsearch=` + searchQuery ;
-    const response = await fetch(endpoint);
-    if (!response.ok) {
-      throw Error(response.statusText);
-    }
-    const json = await response.json();
-    return json;
-  }
-  
-
-  
-
 
 // Datepicker
 $(document).ready(function () {

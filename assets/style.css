@@ -112,7 +112,6 @@
     opacity: 1;
     font-family: 'Abel', sans-serif;;
     font-size: 25px 18px; 
-  
   }
   
   h2 {
@@ -128,7 +127,15 @@
   .search-history-btn {
       margin-right: 5px;
   }
+
+  #hideFool{
+      display: none;
+  }
   
+  #billBox{
+      display: none;
+  }
+
   /* MEDIA QUERY for responsive */
   @media only screen and (max-width: 600px) {
     .input-field .prefix ~ input {
