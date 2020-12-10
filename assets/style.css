@@ -2,16 +2,6 @@
     box-sizing: border-box;
   }
   
-  body {
-    font-family: 'Abel', sans-serif;
-    background-image: url(../assets/images/beach.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover;
-    padding: 10px;
-  }
-  
   header {
     display: flex;
     flex: 1 0 auto;
@@ -30,7 +20,6 @@
     /* background: rgba(255, 202, 102, 0.596); */
   }
   
-  
   .wrapper {
     background-color: rgba(255, 202, 102, 0.596);
     border: 5px solid #e4764ad3;
@@ -40,19 +29,33 @@
      
   }
   
-  .date_container {
-    margin-top: 25px;
-    color: black;
-    font-size: 25px;
-    font-style: underline;
-    justify-content: center;
+  body {
+    font-family: 'Abel', sans-serif;
+    background-image: url(../assets/images/beach.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
     padding: 10px;
   }
   
+    
+  h2 {
+    text-align: center;
+  }
+  
+  p {
+    font-family: 'Abel', sans-serif;
+    font-size: 20px;
+    
+  }
+
   
   footer {
-    display: flex;
-    flex: 1 0 auto;
+    /* display: flex; */
+    /* flex: 1 0 auto; */
+    display: grid;
+    grid-template-rows: auto 1fr auto;
     padding: 40px;
     text-align: center;
     font-family: "Abel", sans-serif;
@@ -62,12 +65,14 @@
     width: 100%;
     margin-top: 100px;
     background: rgba(19, 153, 135, 0.87);
+    border: 5px solid rgba(31, 92, 84, 0.979);;
     color: white;
+    min-height: 100%;
+      
   }
   
   .input-field {
-    width: 50%;
-    color: black;
+    font-family: 'Abel', sans-serif;
   }
   
   .card-tit1e {
@@ -82,10 +87,10 @@
     justify-content: end;
     margin-left: 80%;
     margin-right: 30px;
-    margin-top: -120px;
+    margin-top: -25px;
     margin-bottom: 30px;
-    align-items: end;
   }
+
   
   .card-content p {
     font-size: 35px;
@@ -108,33 +113,64 @@
     margin-left: 10%;
   }
   
+  /* Modal properties */
   .modal-content {
     opacity: 1;
     font-family: 'Abel', sans-serif;;
     font-size: 25px 18px; 
   }
+
   
-  h2 {
-    text-align: center;
+  .date_container {
+    margin-top: 25px;
+    color: black;
+    font-size: 25px;
+    font-style: underline;
+    justify-content: center;
+    padding: 10px;
   }
-  
-  p {
-    font-family: 'Abel', sans-serif;
-    font-size: 23px;
-    
+
+  label {
+    font-size: 25px;
+    border: 2px solid #e4764ad3;
+    background-color: rgba(255, 202, 102, 0.596);
+    color: black;
+    font-style: underline;
   }
 
   .search-history-btn {
       margin-right: 5px;
+      margin-top: 5px;
+  }
+
+  /* Webpage Image */
+  #logo {
+    width: 70px;
+    height: 70px;
+    background-image: url(/assets/images/pine-pic.jpg);
+    margin-top: 35px;
+    justify-content: left;
+    opacity: .78;
+    margin-right: 16px;
+    align-self: stretch;
   }
 
   #hideFool{
       display: none;
   }
   
+
   #billBox{
       display: none;
   }
+
+
+  button {
+    opacity: .85;
+    font-family: 'Abel', sans-serif;
+  }
+
+
 
   /* MEDIA QUERY for responsive */
   @media only screen and (max-width: 600px) {
