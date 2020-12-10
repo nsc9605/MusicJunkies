@@ -20,7 +20,7 @@ The dates that the user chooses will be saved at the bottom of the page for futu
 ## Installation
 
 Deployed link:
-[Click to deploy live link](nsc9605.github.io/musicjunkies/)
+![Click to deploy live link](https://nsc9605.github.io/MusicJunkies/)
 
 
 ## Usage/Demo Screenshot
@@ -38,9 +38,16 @@ Steps to follow once in the page:
 6. When the user clicks on the provided link(s),  it will take the user to a new page where a YouTube video will deploy for the specified song or the biography page will deploy in another window.
 7. Previous selected dates will be saved at the bottom of the page for user to refer back to.
 
+
+
+### Demonstration
+
+![Music Junkies Demo](assets/images/MusicJunkies.gif)
+
 # Demonstration
 
 [Music Junkies Demo](assets/images/MusicJunkies.gif)
+
 
 
 ## Credits
@@ -49,14 +56,9 @@ Steps to follow once in the page:
 
 [Jessica Deck](https://github.com/deck-jessica)
 
-[Wilkinson Williams](https://github.com/Kingcoopa)
-
 [Nicole Catapano](https://github.com/nsc9605)
 
-
-If you followed tutorials, include links to those here as well.
-
-[Name of YouTube Tutorial](www.youtube.com)
+[Wilkinson Williams](https://github.com/Kingcoopa)
 
 
 ## Tech/Framework Used
