@@ -17,9 +17,11 @@
     />
     <link rel="stylesheet" href="assets/style.css" />
 
-    <link rel="icon" 
-    type="image/png" 
-    href="https://ih1.redbubble.net/image.292625905.5584/flat,128x,075,f-pad,128x128,f8f8f8.u3.jpg">
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://ih1.redbubble.net/image.292625905.5584/flat,128x,075,f-pad,128x128,f8f8f8.u3.jpg"
+    />
 
     <title>Music Junkies</title>
   </head>
@@ -36,11 +38,19 @@
         <div class="modal-content">
           <h4>Welcome To Music Junkies</h4>
           <p>
-            This Application is for all the music lovers out there. In the
-            following page, you will be able to select a specific date and once
-            you press the submit button you will be provided with information,
-            and possibly a link to the music video. Please press agree to enter
-            and start choosing dates!
+            This Application is for all the music lovers out there! In the
+            following page, you will select a specific month, day and year in
+            history from the provided calendar. Press the submit button which
+            will display the #1 song, artist and album cover on the Billboard
+            Top 100 Charts of that specific date.
+            <br />
+            <br />
+            Followed by links to that music video (if available) as well as a
+            link for more information about that artist. Finally, the other top
+            5 songs will be listed for that date.
+            <br />
+            <br />
+            Please press agree to enter and start choosing dates!
           </p>
         </div>
         <div class="modal-footer">
@@ -84,14 +94,13 @@
           </div>
           <div class="card-action vidlink"></div>
           <div class="card-action artistlink"></div>
-          <div class="card top5">
-            <h3>Top Songs from This Day</h3>
-          </div>
+          <div class="card top5"></div>
         </div>
       </div>
     </div>
 
     <section class="search-history-container">
+      <label> Dates previously selected </label>
       <div class="searchHistory"></div>
     </section>
 
