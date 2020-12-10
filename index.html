@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- materialize-->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
@@ -15,11 +16,13 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
+    <!-- font -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Abel&display=swap"
       rel="stylesheet"
     />
+    <!-- browser icon -->
     <link
       rel="icon"
       type="image/png"
@@ -32,8 +35,8 @@
   <body>
     <div class="wrapper">
       <header>
-        <div id="logo"></div>
-        <img id="logo" src="assets/images/pine-pic.jpg" alt="logo">
+        <!-- <div id="logo"></div> -->
+        <img id="logo" src="assets/images/pine-pic.jpg" alt="logo" />
         <h1>Music Junkies</h1>
       </header>
     </div>
@@ -68,6 +71,7 @@
       </div>
     </div>
 
+    <!-- Date Container -->
     <section class="date_container">
       <p>
         <label> Select Date: </label>
@@ -99,14 +103,14 @@
           </div>
           <div class="card-action vidlink"></div>
           <div class="card-action artistlink"></div>
-          <div class="card top5"></div>
+          <div class="card top5" id="card-top5"></div>
         </div>
       </div>
     </div>
 
     <section class="search-history-container">
       <label> Dates previously selected </label>
-      <div class="searchHistory"></div>
+      <div id="prev-search" class="searchHistory"></div>
     </section>
 
     <!-- If no video link available--modal message -->

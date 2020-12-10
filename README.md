@@ -39,9 +39,15 @@ Steps to follow once in the page:
 7. Previous selected dates will be saved at the bottom of the page for user to refer back to.
 
 
+
 ### Demonstration
 
 ![Music Junkies Demo](assets/images/MusicJunkies.gif)
+
+# Demonstration
+
+[Music Junkies Demo](assets/images/MusicJunkies.gif)
+
 
 
 ## Credits

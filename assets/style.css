@@ -12,23 +12,10 @@
     font-size: 100px;
     font-weight: bold;
     color: rgb(39, 37, 37);
-    /* transform: scale(1.5); */
-    margin-top: 10px;
-    margin-left: 0px;
-    margin-right: -25px;
     text-align: center;
-    /* background: rgba(255, 202, 102, 0.596); */
+   
   }
-  
-  .wrapper {
-    background-color: rgba(255, 202, 102, 0.596);
-    border: 5px solid #e4764ad3;
-    border-radius: 5px;
-    padding-left: 15px;
-    padding-right: 15px;
-     
-  }
-  
+
   body {
     font-family: 'Abel', sans-serif;
     background-image: url(../assets/images/beach.png);
@@ -39,36 +26,54 @@
     padding: 10px;
   }
   
-    
+  h1{
+    font-size: 4.2rem;
+    line-height: 110%;
+    margin: none;
+  } 
+
   h2 {
     text-align: center;
+  }
+
+  h3 {
+    margin-top: 0.1rem;
   }
   
   p {
     font-family: 'Abel', sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     
   }
 
   
   footer {
-    /* display: flex; */
-    /* flex: 1 0 auto; */
     display: grid;
     grid-template-rows: auto 1fr auto;
     padding: 40px;
     text-align: center;
     font-family: "Abel", sans-serif;
     font-size: 30px;
-    position: relative;
+    position: inherit;
     align-content: end;
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    margin-top: 100px;
     background: rgba(19, 153, 135, 0.87);
-    border: 5px solid rgba(31, 92, 84, 0.979);;
+    border: 5px solid rgba(31, 92, 84, 0.979);
     color: white;
-    min-height: 100%;
-      
+    min-width: 100%;
+    bottom: 0;
+  }
+  
+  /* header wrapper */
+  .wrapper {
+    background-color: rgba(255, 202, 102, 0.596);
+    border: 5px solid #e4764ad3;
+    border-radius: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+     
   }
   
   .input-field {
@@ -78,7 +83,7 @@
   .card-tit1e {
     color: black;
   }
-  
+/* album image properties */
   .card-image {
     display: flex;
     flex: auto;
@@ -87,18 +92,32 @@
     justify-content: end;
     margin-left: 80%;
     margin-right: 30px;
-    margin-top: -25px;
+    margin-top: -125px;
     margin-bottom: 30px;
+    padding: 10px;
+    overflow: hidden;
   }
 
+  .card-content {
+    position: relative;
+  }
   
   .card-content p {
-    font-size: 35px;
+    font-size: 20px;
     color: rgb(49, 2, 49);
     font-family: 'Abel', sans-serif;
     align-content: left;
     justify-content: start;
     text-align: left;
+    padding-right: 10px;
+  }
+
+  #card-top5 p {
+    font-family: 'Abel', sans-serif;
+    font-size: 18px;
+    /* align-content: left; */
+    justify-content: start;
+    padding: 5px;
   }
   
   /* Card whole container properties */
@@ -122,26 +141,41 @@
 
   
   .date_container {
-    margin-top: 25px;
+    margin: 5px 0px 0px 5px;
     color: black;
     font-size: 25px;
-    font-style: underline;
     justify-content: center;
     padding: 10px;
   }
 
   label {
+    display: inline-block;
     font-size: 25px;
     border: 2px solid #e4764ad3;
     background-color: rgba(255, 202, 102, 0.596);
     color: black;
     font-style: underline;
+    padding: 5px;
+    margin-top: 5px;
   }
 
   .search-history-btn {
-      margin-right: 5px;
-      margin-top: 5px;
+    margin: 5px 5px 5px 5px;
+    padding: 5px;
   }
+  
+  .search-history-container {
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    margin: 5px 0px 0px 5px;
+  }
+  
+  #prev-search {
+    padding-top: 15px;
+    padding-left: 5px;
+  }
+
 
   /* Webpage Image */
   #logo {
@@ -153,6 +187,8 @@
     margin-right: 16px;
     align-self: stretch;
   }
+
+/* hide boxes until clicked */
 
   #hideFool{
       display: none;
@@ -171,13 +207,28 @@
 
 
 
-  /* MEDIA QUERY for responsive */
-  @media only screen and (max-width: 600px) {
-    .input-field .prefix ~ input {
+ /* MEDIA QUERY for responsive design */
+@media only screen and (max-width: 600px) {
+  .input-field .prefix ~ input {
     width: 80%;
-    width: calc(100% - 3rem); } 
+    width: calc(100% - 3rem);
   }
-  
-  @media only screen and (max-width: 600px) {
-    .input-field .prefix ~ input {
-    width: 100%; } }
+}
+
+@media only screen and (max-width: 600px) {
+  .input-field .prefix ~ input {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .row-container .card {
+    width: 100px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .row-container .card {
+    width: 400px;
+  }
+}
